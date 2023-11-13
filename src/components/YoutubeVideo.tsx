@@ -36,6 +36,7 @@ export default function YoutubeVideo({
       />
     );
   }
+
   const youtubeOptions = {
     playerVars: {
       controls: 1,
@@ -46,7 +47,7 @@ export default function YoutubeVideo({
       disablekb: 1,
       enablejsapi: 1,
     },
-    origin: "http://localhost:3000",
+    origin: window?.location.origin,
   };
   return (
     <Suspense fallback={<Loading />}>
