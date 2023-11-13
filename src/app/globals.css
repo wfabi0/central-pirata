@@ -2,26 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Monster Friend Back";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Monster Friend Back"),
+    url("https://fonts.cdnfonts.com/s/88215/MonsterFriendBack.woff")
+      format("woff");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "Monster Friend Fore";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Monster Friend Fore"),
+    url("https://fonts.cdnfonts.com/s/88215/MonsterFriendFore.woff")
+      format("woff");
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: "Determination Sans";
+  src: url("/fonts/DeterminationSans.woff2") format("woff2"),
+    url("/fonts/DeterminationSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.monsterFore {
+  font-family: "Monster Friend Fore", sans-serif;
+}
+
+.monsterBack {
+  font-family: "Monster Friend Back", sans-serif;
+}
+
+.determination {
+  font-family: "Determination Sans", sans-serif;
+}
+
+.carousel-clear > .slick-prev:before,
+.carousel-clear > .slick-next:before {
+  content: "" !important;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.slick-margin > .slick-slide {
+  padding: 0 15px;
+}
+.slick-margin > .slick-list {
+  margin: 0 2em;
+}
+
+.game-slick > .slick-prev {
+  left: 0px;
+}
+.game-slick > .slick-next {
+  right: 10px;
 }

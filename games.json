@@ -1,0 +1,96 @@
+[
+  {
+    "title": "Elden Ring",
+    "image": "https://i.imgur.com/l66jFQ4.jpg",
+    "bannerImage": "https://i.imgur.com/H3mbw3D.png",
+    "isNew": false,
+    "price": 229.9,
+    "newPrice": 179.9,
+    "preview": ["https://www.youtube.com/watch?v=E3Huy2cdih0"]
+  },
+  {
+    "title": "Red Dead Redemption 2",
+    "image": "https://i.imgur.com/WXqwKUm.png",
+    "bannerImage": "https://i.imgur.com/XQXvmdK.png",
+    "isNew": false,
+    "price": 299.9,
+    "newPrice": 89.91,
+    "preview": ["https://www.youtube.com/watch?v=gmA6MrX81z4"]
+  },
+  {
+    "title": "The Witcher 3: Wild Hunt",
+    "image": "https://i.imgur.com/pxaYYX1.png",
+    "bannerImage": "https://i.imgur.com/GZekMfs.png",
+    "isNew": false,
+    "price": 129.9,
+    "newPrice": 39.78,
+    "preview": ["https://www.youtube.com/watch?v=1-l29HlKkXU"]
+  },
+  {
+    "title": "Hogwarts Legacy",
+    "image": "https://i.imgur.com/LsdPGEl.jpg",
+    "bannerImage": "https://i.imgur.com/vNb59lB.jpg",
+    "isNew": false,
+    "price": 249.9,
+    "newPrice": 178.84,
+    "preview": ["https://www.youtube.com/watch?v=78CP8na1Fpo"]
+  },
+  {
+    "title": "Lies of P",
+    "image": "https://i.imgur.com/dailcFp.jpg",
+    "bannerImage": "https://i.imgur.com/7gSVpGS.jpg",
+    "isNew": false,
+    "price": 249.9,
+    "newPrice": 190.59,
+    "preview": ["https://www.youtube.com/watch?v=kXZoKdr-xeo"]
+  },
+  {
+    "title": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS",
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202302/2407/ea5dc84380832b4790178dcc68e408afd8f28f2d318b5ea6.png",
+    "bannerImage": "https://image.api.playstation.com/vulcan/ap/rnd/202308/0800/09a199d8ad00f110a084ffd9baa8f1f12c606fb9cc2b165b.jpg",
+    "isNew": true,
+    "price": 229.9,
+    "newPrice": 195.0,
+    "preview": ["https://www.youtube.com/watch?v=z92uGmeJJTw"]
+  },
+  {
+    "title": "Tales of Arise - Beyond the Dawn Edition",
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202308/3119/da06a1eea20561caf374519d1ae0b1505cafe57e60b76b41.png",
+    "bannerImage": "https://blog.br.playstation.com/tachyon/sites/4/2023/09/d495c13279e84856a03328daa1df28882df1a2d6.jpg",
+    "isNew": true,
+    "price": 114.9,
+    "newPrice": 99.99,
+    "preview": ["https://www.youtube.com/watch?v=wctcaw1oHGE"]
+  },
+  {
+    "title": "Tomb Raider I-III Remastered",
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202308/1521/2a9a576f12f8901b5058856c3b299def44d3ddaa5c93b99f.png",
+    "bannerImage": "https://hypandogames.com.br/wp-content/uploads/2023/09/68hISohBKmI-HD.jpg",
+    "isNew": true,
+    "price": 88.99,
+    "newPrice": 71.99,
+    "preview": [
+      "https://www.youtube.com/watch?v=hC1_bXCjHME",
+      "https://i.imgur.com/yzPLJpI.jpg",
+      "https://i.imgur.com/uPQ5nfy.jpg"
+    ]
+  },
+  {
+    "title": "TEKKEN 8",
+    "image": "https://bdjogos.com.br/capas/18336-tekken-8-capa-1.jpg",
+    "bannerImage": "https://emeraldcorp.com.br/wp-content/uploads/2023/07/preview-tekken-8-capa.jpg",
+    "isNew": true,
+    "price": 269.9,
+    "newPrice": 239.9,
+    "preview": ["https://www.youtube.com/watch?v=PsCpewoF2E4"]
+  },
+  {
+    "title": "Risk of Rain Returns",
+    "image": "https://i.imgur.com/oCr6gNv.jpg",
+    "bannerImage": "https://i.ytimg.com/vi/F7jgwuE86Q0/maxresdefault.jpg",
+    "isNew": true,
+    "price": 46.99,
+    "newPrice": 39.94,
+    "preview": ["https://www.youtube.com/watch?v=gyXNUXEfNvc"]
+  }
+]
