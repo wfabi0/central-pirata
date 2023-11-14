@@ -59,7 +59,6 @@ export default function GamePage({ params }: GamePageProps) {
         </div>
       </div>
       <div className="flex justify-center w-[79rem] gap-x-10 relative mx-auto">
-        {/* <YoutubeVideo videoUrl={gameSelected.teaserVideoUrl} /> */}
         <GameSlider game={gameSelected} key={1} />
         <div className="flex w-1/2 border-4 border-orange-50 items-center justify-center">
           comentario

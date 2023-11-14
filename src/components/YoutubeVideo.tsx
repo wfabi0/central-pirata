@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { Suspense, useEffect, useState } from "react";
-import YouTube from "react-youtube";
+// import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 interface YoutubeVideoProps {
   videoUrl?: string;
@@ -15,15 +17,6 @@ export default function YoutubeVideo({
   onPlay,
   onPause,
 }: YoutubeVideoProps) {
-  const [videoId, setVideoId] = useState("");
-  const getVideoId = (url?: string) => {
-    const match = url?.match(/[?&]v=([^?&]+)/);
-    return match && match[1];
-  };
-  useEffect(() => {
-    const id = getVideoId(videoUrl);
-    if (id) setVideoId(id);
-  }, [videoUrl]);
   if (!videoUrl) {
     return (
       <Image
@@ -33,31 +26,29 @@ export default function YoutubeVideo({
         width={816}
         height={400}
         className="flex object-cover"
+        loading="lazy"
       />
     );
   }
-
-  const youtubeOptions = {
-    playerVars: {
-      controls: 1,
-      modestbranding: 1,
-      rel: 0,
-      showinfo: 0,
-      fs: 1,
-      disablekb: 1,
-      enablejsapi: 1,
-    },
-    origin: window?.location.origin,
+  const playerOptions = {
+    controls: true,
+    modestbranding: 1,
+    rel: 0,
+    showinfo: 0,
+    fs: 1,
+    disablekb: 1,
+    enablejsapi: 1,
   };
   return (
-    <Suspense fallback={<Loading />}>
-      <YouTube
-        videoId={videoId}
-        opts={youtubeOptions}
-        onPlay={onPlay}
-        onPause={onPause}
-      />
-    </Suspense>
+    <ReactPlayer
+      url={videoUrl}
+      config={{ youtube: { playerVars: playerOptions } }}
+      onReady={onPlay}
+      onStart={onPlay}
+      onPause={onPause}
+      onError={(e) => console.error("Error playing video:", e)}
+      fallback={<Loading />}
+    />
   );
 }
 

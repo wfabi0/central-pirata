@@ -6,7 +6,11 @@
     "isNew": false,
     "price": 229.9,
     "newPrice": 179.9,
-    "preview": ["https://www.youtube.com/watch?v=E3Huy2cdih0"]
+    "preview": [
+      "https://www.youtube.com/watch?v=E3Huy2cdih0",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/618418052f91a002e3f9cf6b/screenshots/sulcmvodnhfwgc6i8evb.jpg",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/618418052f91a002e3f9cf6b/screenshots/dkwnd7zhavqbssv9ic6h.jpg"
+    ]
   },
   {
     "title": "Red Dead Redemption 2",
@@ -15,7 +19,11 @@
     "isNew": false,
     "price": 299.9,
     "newPrice": 89.91,
-    "preview": ["https://www.youtube.com/watch?v=gmA6MrX81z4"]
+    "preview": [
+      "https://www.youtube.com/watch?v=gmA6MrX81z4",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/5fbd76bbc883e62934046c52/screenshots/p3bveicrfjo2vexqn4ax.jpg",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/5fbd76bbc883e62934046c52/screenshots/lfbbvv4icyurh9iwvxlk.jpg"
+    ]
   },
   {
     "title": "The Witcher 3: Wild Hunt",
@@ -24,7 +32,11 @@
     "isNew": false,
     "price": 129.9,
     "newPrice": 39.78,
-    "preview": ["https://www.youtube.com/watch?v=1-l29HlKkXU"]
+    "preview": [
+      "https://www.youtube.com/watch?v=1-l29HlKkXU",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/ss_5710298af2318afd9aa72449ef29ac4a2ef64d8e.600x338.jpg",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/ss_0901e64e9d4b8ebaea8348c194e7a3644d2d832d.600x338.jpg"
+    ]
   },
   {
     "title": "Hogwarts Legacy",
@@ -33,7 +45,11 @@
     "isNew": false,
     "price": 249.9,
     "newPrice": 178.84,
-    "preview": ["https://www.youtube.com/watch?v=78CP8na1Fpo"]
+    "preview": [
+      "https://www.youtube.com/watch?v=78CP8na1Fpo",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/6307dc85ba5b7c0014a7501e/screenshots/iowptdcxkplxf2efxdsm.jpg",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/6307dc85ba5b7c0014a7501e/screenshots/d2fbivss6cpulnylxwns.jpg"
+    ]
   },
   {
     "title": "Lies of P",
@@ -42,7 +58,11 @@
     "isNew": false,
     "price": 249.9,
     "newPrice": 190.59,
-    "preview": ["https://www.youtube.com/watch?v=kXZoKdr-xeo"]
+    "preview": [
+      "https://www.youtube.com/watch?v=kXZoKdr-xeo",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1627720/ss_cef0c2964b82e2b80ab0756da08f61c27d9fa33c.600x338.jpg",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1627720/ss_b510d9d65802c3cc776d1296c3daa1e9a79e3615.600x338.jpg"
+    ]
   },
   {
     "title": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS",
@@ -51,7 +71,11 @@
     "isNew": true,
     "price": 229.9,
     "newPrice": 195.0,
-    "preview": ["https://www.youtube.com/watch?v=z92uGmeJJTw"]
+    "preview": [
+      "https://www.youtube.com/watch?v=z92uGmeJJTw",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1020790/ss_b335f364a9e7bef84c54f5236f8557279e0f7ceb.600x338.jpg",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1020790/ss_726a0954289660537a03f058ffa44aa42a199edc.600x338.jpg"
+    ]
   },
   {
     "title": "Tales of Arise - Beyond the Dawn Edition",
@@ -60,7 +84,11 @@
     "isNew": true,
     "price": 114.9,
     "newPrice": 99.99,
-    "preview": ["https://www.youtube.com/watch?v=wctcaw1oHGE"]
+    "preview": [
+      "https://www.youtube.com/watch?v=wctcaw1oHGE",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/654aa4b4f6edbe0019707235/screenshots/ybanv0lt1wcfv0ulycxz.jpg",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/654aa4b4f6edbe0019707235/screenshots/zjpk5zjmysp0ambx8win.jpg"
+    ]
   },
   {
     "title": "Tomb Raider I-III Remastered",
@@ -82,7 +110,11 @@
     "isNew": true,
     "price": 269.9,
     "newPrice": 239.9,
-    "preview": ["https://www.youtube.com/watch?v=PsCpewoF2E4"]
+    "preview": [
+      "https://www.youtube.com/watch?v=PsCpewoF2E4",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/64778de7906ce600160145df/screenshots/hrl5a3qighqz5lsjqocu.jpg",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/64778de7906ce600160145df/screenshots/v6kk6jszgr9dnvldt52f.jpg"
+    ]
   },
   {
     "title": "Risk of Rain Returns",
@@ -91,6 +123,10 @@
     "isNew": true,
     "price": 46.99,
     "newPrice": 39.94,
-    "preview": ["https://www.youtube.com/watch?v=gyXNUXEfNvc"]
+    "preview": [
+      "https://www.youtube.com/watch?v=gyXNUXEfNvc",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/653bf0812364a942c801bdc0/screenshots/kyedu84ivhqvjsbfzbje.jpg",
+      "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/653bf0812364a942c801bdc0/screenshots/taxhok5m2kkfvbzh3ebx.jpg"
+    ]
   }
 ]

@@ -21,7 +21,7 @@ export default function GameSlider({ game }: GameSliderProps) {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 10000,
     pauseOnHover: false,
     pauseOnFocus: true,
     prevArrow: <CustomArrow direction="left" />,
@@ -89,12 +89,16 @@ export default function GameSlider({ game }: GameSliderProps) {
             key={index}
             src={
               isVideo(item)
-                ? `http://img.youtube.com/vi/${getVideoId(item)}/0.jpg`
+                ? `http://img.youtube.com/vi/${getVideoId(
+                    item
+                  )}/maxresdefault.jpg`
                 : item
             }
             onClick={() => goToSlide(index)}
-            className={`cursor-pointer opacity-80 hover:opacity-100 w-40 h-20 ${
-              index === currentSlide ? "border-2 border-blue-500" : ""
+            className={`cursor-pointer opacity-90 hover:opacity-100 w-40 h-20 ${
+              index === currentSlide
+                ? "border-2 border-blue-500 opacity-100"
+                : ""
             }`}
           />
         ))}
