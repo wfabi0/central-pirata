@@ -23,6 +23,7 @@ export const monsterFriend = {
 export const metadata: Metadata = {
   title: "Central Pirata",
   description: "Encontre seus jogos favoritos em promoção!",
+  icons: "@/public/website-icon.png",
 };
 
 export default function RootLayout({
@@ -32,9 +33,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      {/* <Script>
-        <script src="//www.youtube.com/iframe_api"></script>
-      </Script> */}
       <body
         className={`${bebas.className} text-white flex flex-col min-h-screen`}
       >

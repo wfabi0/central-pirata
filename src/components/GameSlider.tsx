@@ -5,6 +5,7 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { CustomArrowProps, GameProps } from "@/utils/types";
 import { useRef, useState } from "react";
 import YoutubeVideo from "./YoutubeVideo";
+import Image from "next/image";
 
 interface GameSliderProps {
   game: GameProps;
@@ -75,9 +76,12 @@ export default function GameSlider({ game }: GameSliderProps) {
               />
             ) : (
               <div key={index} className="">
-                <img
+                <Image
                   key={index}
                   src={item}
+                  width={640}
+                  height={350}
+                  quality={100}
                   alt={`Slide ${index + 1}`}
                   className="w-full h-auto"
                 />
