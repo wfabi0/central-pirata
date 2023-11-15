@@ -2,6 +2,23 @@
   {
     "title": "Elden Ring",
     "image": "https://i.imgur.com/l66jFQ4.jpg",
+    "description": "O NOVO RPG DE AÇÃO E FANTASIA. \nLevante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.",
+    "reqs": {
+      "min": [
+        "Windows 10",
+        "INTEL CORE I5-8400 or AMD RYZEN 3 3300X",
+        "12 GB de RAM",
+        "NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB",
+        "60 GB de espaço disponível"
+      ],
+      "max": [
+        "Windows 10/11",
+        "INTEL CORE I7-8700K or AMD RYZEN 5 3600X",
+        "16 GB de RAM",
+        "NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB",
+        "60 GB de espaço disponível"
+      ]
+    },
     "bannerImage": "https://i.imgur.com/H3mbw3D.png",
     "isNew": false,
     "price": 229.9,
@@ -15,6 +32,23 @@
   {
     "title": "Red Dead Redemption 2",
     "image": "https://i.imgur.com/WXqwKUm.png",
+    "description": "América, 1899. O fim da era do velho oeste começa quando os homens da lei caçam as últimas gangues de foras-da-lei. Aqueles que não se rendem ou sucumbem, acabam mortos. Depois que um assalto termina muito mal na cidade de Blackwater, Arthur Morgan e a gangue de Dutch Van der Linde são obrigados a fugir. Com os agentes federais e os melhores caçadores de recompensas do país na sua cola, a gangue deve roubar, assaltar e abrir caminho pelo coração da América para sobreviver. O surgimento de grupos internos ameaça destruir a gangue, então Arthur deve escolher entre seus próprios ideais e a lealdade à gangue que o criou.",
+    "reqs": {
+      "min": [
+        "Windows 10 - April 2018 Update (v1803)",
+        "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
+        "12 GB de RAM",
+        "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
+        "150 GB de espaço disponível"
+      ],
+      "max": [
+        "Windows 10/11",
+        "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
+        "12 GB de RAM",
+        "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
+        "150 GB de espaço disponível"
+      ]
+    },
     "bannerImage": "https://i.imgur.com/XQXvmdK.png",
     "isNew": false,
     "price": 299.9,
@@ -28,6 +62,23 @@
   {
     "title": "The Witcher 3: Wild Hunt",
     "image": "https://i.imgur.com/pxaYYX1.png",
+    "description": "Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.",
+    "reqs": {
+      "min": [
+        "64-bit Windows 7, 64-bit Windows 8 (8.1)",
+        "Intel CPU Core i5-2500K 3.3GHz / AMD A10-5800K APU (3.8GHz)",
+        "6 GB de RAM",
+        "Nvidia GPU GeForce GTX 660 / AMD GPU Radeon HD 7870",
+        "50 GB de espaço disponível"
+      ],
+      "max": [
+        "64-bit Windows 10/11",
+        "Intel Core i5-7400 / Ryzen 5 1600",
+        "8 GB de RAM",
+        "Nvidia GTX 1070 / Radeon RX 480",
+        "50 GB de espaço disponível"
+      ]
+    },
     "bannerImage": "https://i.imgur.com/GZekMfs.png",
     "isNew": false,
     "price": 129.9,
@@ -41,6 +92,23 @@
   {
     "title": "Hogwarts Legacy",
     "image": "https://i.imgur.com/LsdPGEl.jpg",
+    "description": "Hogwarts Legacy é um RPG de ação imersivo de mundo aberto. Agora você pode assumir o controle da ação e estar no centro de sua própria aventura no mundo bruxo. ",
+    "reqs": {
+      "min": [
+        "64-bit Windows 10",
+        "Intel Core i5-6600 (3.3Ghz) or AMD Ryzen 5 1400 (3.2Ghz)",
+        "16 GB de RAM",
+        "NVIDIA GeForce GTX 960 4GB or AMD Radeon RX 470 4GB",
+        "85 GB de espaço disponível"
+      ],
+      "max": [
+        "64-bit Windows 10",
+        "Intel Core i7-8700 (3.2Ghz) or AMD Ryzen 5 3600 (3.6 Ghz)",
+        "16 GB de RAM",
+        "NVIDIA GeForce 1080 Ti or AMD Radeon RX 5700 XT or INTEL Arc A770",
+        "85 GB de espaço disponível"
+      ]
+    },
     "bannerImage": "https://i.imgur.com/vNb59lB.jpg",
     "isNew": false,
     "price": 249.9,
@@ -54,6 +122,23 @@
   {
     "title": "Lies of P",
     "image": "https://i.imgur.com/dailcFp.jpg",
+    "description": "Lies of P é um soulslike emocionante que pega a história de Pinóquio, vira-a de ponta-cabeça e coloca-a num cenário sombrio e elegante da era belle époque. ",
+    "reqs": {
+      "min": [
+        "Windows 10 64bit",
+        "AMD Ryzen 3 1200 / Intel Core i3-6300",
+        "8 GB de RAM",
+        "AMD Radeon RX 560 4GB / NVIDIA GeForce GTX 960 4GB",
+        "50 GB de espaço disponível"
+      ],
+      "max": [
+        "Windows 10 64bit",
+        "AMD Ryzen 3 1200/Intel Core i3-6300",
+        "16 GB de RAM",
+        "AMD Radeon RX 6500 XT 4GB / NVIDIA GeForce GTX 1660 6GB",
+        "50 GB de espaço disponível"
+      ]
+    },
     "bannerImage": "https://i.imgur.com/7gSVpGS.jpg",
     "isNew": false,
     "price": 249.9,
@@ -67,6 +152,23 @@
   {
     "title": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS",
     "image": "https://image.api.playstation.com/vulcan/ap/rnd/202302/2407/ea5dc84380832b4790178dcc68e408afd8f28f2d318b5ea6.png",
+    "description": "Ninjas lendários se reúnem no próximo jogo da série STORM! NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS é um jogo de ação/luta com batalhas ninja frenéticas e dois modos história diferentes. ",
+    "reqs": {
+      "min": [
+        "Windows 10",
+        "Intel Core i7-8700 / AMD Ryzen 7 2700X",
+        "8 GB de RAM",
+        "Nvidia GeForce GTX 660 Ti / Radeon R9 270X / Intel Arc A380 ",
+        "50 GB de espaço disponível"
+      ],
+      "max": [
+        "Windows 11",
+        "Intel Core i7-11700K / AMD Ryzen 5 3600 ",
+        "8 GB de RAM",
+        "Nvidia GeForce GTX 770 / AMD Radeon RX 480 / Intel Arc A750",
+        "30.36 GB de espaço disponível"
+      ]
+    },
     "bannerImage": "https://image.api.playstation.com/vulcan/ap/rnd/202308/0800/09a199d8ad00f110a084ffd9baa8f1f12c606fb9cc2b165b.jpg",
     "isNew": true,
     "price": 229.9,
@@ -80,6 +182,23 @@
   {
     "title": "Tales of Arise - Beyond the Dawn Edition",
     "image": "https://image.api.playstation.com/vulcan/ap/rnd/202308/3119/da06a1eea20561caf374519d1ae0b1505cafe57e60b76b41.png",
+    "description": "300 anos de tirania. Uma máscara misteriosa. Dor e memórias perdidas. Empunhe a Espada Flamejante e se una a uma jovem intocável para enfrentar os opressores. Viva uma história de libertação com personagens caprichados nos gráficos de nova geração! ",
+    "reqs": {
+      "min": [
+        "Windows 10 (64-bit Only)",
+        "Intel Core i5-2300 or AMD Ryzen 3 1200",
+        "8 GB de RAM",
+        "GeForce GTX 760 or Radeon HD 7950  ",
+        "45 GB de espaço disponível"
+      ],
+      "max": [
+        "Windows 10 (64-bit Only)",
+        "Intel Core i5-4590 or AMD FX-8350",
+        "8 GB de RAM",
+        "GeForce GTX 970 or Radeon R9 390",
+        "45 GB de espaço disponível"
+      ]
+    },
     "bannerImage": "https://blog.br.playstation.com/tachyon/sites/4/2023/09/d495c13279e84856a03328daa1df28882df1a2d6.jpg",
     "isNew": true,
     "price": 114.9,

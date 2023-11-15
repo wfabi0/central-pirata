@@ -4,7 +4,7 @@ import Slider, { Settings } from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { CustomArrowProps, GameProps } from "@/utils/types";
 import { useRef, useState } from "react";
-import YoutubeVideo from "./YoutubeVideo";
+import YoutubeVideo from "../YoutubeVideo";
 import Image from "next/image";
 
 interface GameSliderProps {
@@ -60,10 +60,10 @@ export default function GameSlider({ game }: GameSliderProps) {
   };
   return (
     <div className="flex w-1/2 flex-col">
-      <div className="flex max-w-[100%] mx-auto border-orange-50 items-center justify-center pb-0">
+      <div className="flex max-w-[100%] mx-auto items-center justify-center pb-0">
         <Slider
           {...settings}
-          className="w-full h-full carousel-clear game-slick slick-game mx-auto shadow-xl"
+          className="w-full h-full carousel-clear game-slick slick-game mx-auto shadow-xl group transition duration-300"
           ref={sliderRef}
         >
           {game.preview.map((item, index) =>
@@ -75,23 +75,21 @@ export default function GameSlider({ game }: GameSliderProps) {
                 onPause={handleVideoPause}
               />
             ) : (
-              <div key={index} className="">
-                <Image
-                  key={index}
-                  src={item}
-                  width={640}
-                  height={350}
-                  quality={100}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full h-auto"
-                />
-              </div>
+              <Image
+                key={index}
+                src={item}
+                width={816}
+                height={400}
+                quality={100}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-auto"
+              />
             )
           )}
         </Slider>
       </div>
       <div
-        className="flex overflow-x-auto max-w-[100%] gap-x-4 scroll-smooth"
+        className="flex overflow-x-auto max-w-[100%] gap-x-4 scroll-smooth mt-2"
         ref={scrollContainerRef}
       >
         {game.preview.map((item, index) => (
@@ -130,7 +128,10 @@ function CustomArrow({
   return (
     <div
       onClick={onClick}
-      className={className}
+      className={
+        className +
+        " invisible opacity-0 group-hover:visible group-hover:opacity-100 transition duration-300"
+      }
       style={{ ...style, zIndex: 1 }}
     >
       <Icon className="text-white" size={32} />

@@ -60,7 +60,7 @@ export default function PromotionCard({
       </Link>
       <div className="px-6 py-4">
         <button className="flex justify-center bg-orange-500 group-hover:bg-orange-700 text-white font-bold py-2 rounded-2xl w-full transition duration-300">
-          <BsFillCartPlusFill className="w-5 h-5 mr-1 collapse group-hover:visible" />{" "}
+          <BsFillCartPlusFill className="w-5 h-5 mr-1 collapse group-hover:visible" />
           Adicionar ao Carrinho
         </button>
       </div>

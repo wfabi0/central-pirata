@@ -5,7 +5,8 @@ import gameList from "../../../../games.json";
 import { useEffect } from "react";
 import Image from "next/image";
 import YoutubeVideo from "@/components/YoutubeVideo";
-import GameSlider from "@/components/GameSlider";
+import GameSlider from "@/components/game/GameSlider";
+import GameWidget from "@/components/game/GameWidget";
 
 interface GamePageProps {
   params: {
@@ -30,7 +31,7 @@ export default function GamePage({ params }: GamePageProps) {
   }
   return (
     <main
-      className="flex min-h-screen flex-col bg-[url('https://i.imgur.com/3xM4fk9.jpg')] bg-center bg-no-repeat bg-cover bg-black pb-5"
+      className="flex min-h-screen flex-col bg-[url('https://i.imgur.com/3xM4fk9.jpg')] bg-center bg-no-repeat bg-cover bg-black pb-16"
       id="top"
     >
       <div className="flex justify-center items-center text-center mt-16 z-10">
@@ -59,9 +60,9 @@ export default function GamePage({ params }: GamePageProps) {
         </div>
       </div>
       <div className="flex justify-center w-[79rem] gap-x-10 relative mx-auto">
-        <GameSlider game={gameSelected} key={1} />
-        <div className="flex w-1/2 border-4 border-orange-50 items-center justify-center">
-          comentario
+        <GameSlider game={gameSelected} />
+        <div className="flex w-1/2 border-2 border-white bg-black">
+          <GameWidget game={gameSelected} />
         </div>
       </div>
     </main>

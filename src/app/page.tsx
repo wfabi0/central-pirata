@@ -1,3 +1,5 @@
+// TODO: quando passar o mouse em cima dos titulos principais de * virar > (dar ideia de seleção e fazer o som)
+
 import { monsterFriend } from "./layout";
 import Image from "next/image";
 import TextSelectSound from "@/components/TextSelectSound";
