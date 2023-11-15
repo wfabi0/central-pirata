@@ -6,13 +6,21 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { BsFillCartPlusFill } from "react-icons/bs";
 
+interface PromotionCardProps {
+  title: string;
+  bannerImage: string;
+  price: number;
+  isNew: boolean;
+  newPrice: number;
+}
+
 export default function PromotionCard({
   title,
   bannerImage,
   price,
   isNew,
   newPrice,
-}: GameProps) {
+}: PromotionCardProps) {
   useEffect(() => {
     Howler.volume(0.7);
   }, []);

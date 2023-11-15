@@ -48,6 +48,7 @@ export default function Navbar() {
       <button
         onClick={toggleSom}
         className="items-center absolute left-1/2 transform -translate-x-1/2 pt-12 px-10 z-20"
+        title="Clique para ativar/desativar o som"
       >
         <Image
           src={"https://i.imgur.com/UCBgMJu.png"}

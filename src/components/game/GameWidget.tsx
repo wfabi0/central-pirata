@@ -6,6 +6,7 @@ import { BsFillCartPlusFill } from "react-icons/bs";
 import { FaSteam } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 import { GoArrowSwitch } from "react-icons/go";
+import ChangeReqButton from "./ChangeReqButton";
 
 interface GameWidgetProps {
   game: GameProps;
@@ -20,6 +21,10 @@ export default function GameWidget({ game }: GameWidgetProps) {
   const reqToString = () => {
     if (req === 0) return "Mínimos";
     return "Recomendados";
+  };
+  const checkReq = () => {
+    if (game.reqs.max.length <= 0) return false;
+    return true;
   };
   return (
     <div className="determination flex flex-col m-4 gap-y-2 max-w-[35rem]">
@@ -69,13 +74,16 @@ export default function GameWidget({ game }: GameWidgetProps) {
         <div className="flex-col text-[1rem]">
           <div className="flex flex-row text-[1.5rem] text-amber-300 items-center w-full relative">
             {">"} Requisitos - {reqToString()}:
-            <div
-              className="flex absolute left-[94%] rounded-full border-2 border-amber-300 p-0.5 items-center justify-center cursor-pointer hover:border-amber-600 hover:text-amber-600 transition duration-300"
-              onClick={() => changeReq()}
-              title="Troque os Requisitos"
-            >
-              <GoArrowSwitch className="w-6 h-6" />
-            </div>
+            {checkReq() && (
+              <ChangeReqButton
+                soundPath="/sounds/undertale click sound.mp3"
+                className="flex absolute left-[94%] rounded-full border-2 border-amber-300 p-0.5 items-center justify-center cursor-pointer hover:border-amber-600 hover:text-amber-600 transition duration-300"
+                onClick={() => changeReq()}
+                title="Troque os Requisitos"
+              >
+                <GoArrowSwitch className="w-6 h-6" />
+              </ChangeReqButton>
+            )}
           </div>
           {req === 0 ? (
             <>
@@ -100,7 +108,7 @@ export default function GameWidget({ game }: GameWidgetProps) {
                 <div className="text-zinc-400">{game.reqs.min[4]}</div>
               </div>
             </>
-          ) : (
+          ) : checkReq() ? (
             <>
               <div className="flex flex-row items-center gap-x-2">
                 <div>SO:</div>{" "}
@@ -121,6 +129,29 @@ export default function GameWidget({ game }: GameWidgetProps) {
               <div className="flex flex-row items-center gap-x-2">
                 <div>Armazenamento:</div>{" "}
                 <div className="text-zinc-400">{game.reqs.max[4]}</div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="flex flex-row items-center gap-x-2">
+                <div>SO:</div>{" "}
+                <div className="text-zinc-400">{game.reqs.min[0]}</div>
+              </div>
+              <div className="flex flex-row items-center gap-x-2">
+                <div>Processador:</div>{" "}
+                <div className="text-zinc-400">{game.reqs.min[1]}</div>
+              </div>
+              <div className="flex flex-row items-center gap-x-2">
+                <div>Memória:</div>{" "}
+                <div className="text-zinc-400">{game.reqs.min[2]}</div>
+              </div>
+              <div className="flex flex-row items-center gap-x-2">
+                <div>Placa de Vídeo:</div>{" "}
+                <div className="text-zinc-400">{game.reqs.min[3]}</div>
+              </div>
+              <div className="flex flex-row items-center gap-x-2">
+                <div>Armazenamento:</div>{" "}
+                <div className="text-zinc-400">{game.reqs.min[4]}</div>
               </div>
             </>
           )}

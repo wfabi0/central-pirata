@@ -212,6 +212,17 @@
   {
     "title": "Tomb Raider I-III Remastered",
     "image": "https://image.api.playstation.com/vulcan/ap/rnd/202308/1521/2a9a576f12f8901b5058856c3b299def44d3ddaa5c93b99f.png",
+    "description": "Descubra as aventuras originais de Lara Croft, fielmente restauradas.",
+    "reqs": {
+      "min": [
+        "Windows 7+",
+        "Intel i3",
+        "8 GB de RAM",
+        "NVIDA RTX 970",
+        "2 GB de espaço disponível"
+      ],
+      "max": []
+    },
     "bannerImage": "https://hypandogames.com.br/wp-content/uploads/2023/09/68hISohBKmI-HD.jpg",
     "isNew": true,
     "price": 88.99,
@@ -228,6 +239,23 @@
     "title": "TEKKEN 8",
     "image": "https://bdjogos.com.br/capas/18336-tekken-8-capa-1.jpg",
     "bannerImage": "https://emeraldcorp.com.br/wp-content/uploads/2023/07/preview-tekken-8-capa.jpg",
+    "description": "Prepare-se para o próximo capítulo da lendária franquia de jogos de luta: TEKKEN 8. ",
+    "reqs": {
+      "min": [
+        "Windows 10 64-Bit",
+        "Intel Core i5-6600K/AMD Ryzen 5 1600",
+        "8 GB de RAM",
+        "Nvidia GeForce GTX 1050Ti/AMD Radeon R9 380X",
+        "100 GB de espaço disponível"
+      ],
+      "max": [
+        "Windows 10 64-Bit",
+        "Nvidia GeForce RTX 2070/AMD Radeon RX 5700 XT",
+        "16 GB de RAM",
+        "Nvidia GeForce GTX 1050Ti/AMD Radeon R9 380X",
+        "100 GB de espaço disponível"
+      ]
+    },
     "isNew": true,
     "price": 269.9,
     "newPrice": 239.9,
@@ -241,6 +269,17 @@
     "title": "Risk of Rain Returns",
     "image": "https://i.imgur.com/oCr6gNv.jpg",
     "bannerImage": "https://i.ytimg.com/vi/F7jgwuE86Q0/maxresdefault.jpg",
+    "description": "Cuidadosamente desenvolvido, remasterizado e cheio de novas maneiras de jogar! Risk of Rain está de volta, e ainda melhor! Desfrute do roguelike icônico cheio de combinações únicas de itens, agora com Sobreviventes inéditos, multijogador revisado, conteúdo do Risk of Rain 2 e muito mais! ",
+    "reqs": {
+      "min": [
+        "Windows 10",
+        "Intel Core i5-2400 or AMD FX-8350",
+        "4 GB de RAM",
+        "Nvidia GeForce GT 710, 1 GB or AMD Radeon R7 240, 1 GB",
+        "350 MB de espaço disponível"
+      ],
+      "max": []
+    },
     "isNew": true,
     "price": 46.99,
     "newPrice": 39.94,

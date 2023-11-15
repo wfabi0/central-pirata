@@ -105,7 +105,11 @@ export default function Footer() {
             </div>
             <div className="text-end">35160-004</div>
             <div className="justify-end pt-2 flex">
-              <button onClick={toggleSom} className="justify-end flex">
+              <button
+                onClick={toggleSom}
+                className="justify-end flex"
+                title="Clique para ativar/desativar o som"
+              >
                 {!someState ? <FaVolumeUp /> : <FaVolumeMute />}
               </button>
             </div>

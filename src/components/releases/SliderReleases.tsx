@@ -27,14 +27,12 @@ export default function SliderReleases({ gameList }: CarouselProps) {
     <Slider {...settings} className="carousel-clear slick-margin">
       {gameList.map((game, index) => (
         <PromotionCard
-          image={game.image}
           title={game.title}
           isNew={game.isNew}
           key={index}
           newPrice={game.newPrice}
           price={game.price}
           bannerImage={game.bannerImage}
-          preview={game.preview}
         />
       ))}
     </Slider>
