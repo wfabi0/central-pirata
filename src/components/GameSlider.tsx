@@ -14,6 +14,7 @@ export default function GameSlider({ game }: GameSliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slickPaused, setSlickPaused] = useState(false);
   const sliderRef: any = useRef();
+  const scrollContainerRef: any = useRef();
   const settings: Settings = {
     dots: false,
     infinite: true,
@@ -29,6 +30,8 @@ export default function GameSlider({ game }: GameSliderProps) {
     beforeChange: (current, next) => {
       setCurrentSlide(next);
       setSlickPaused(true);
+      const slidePosition = next * 40;
+      scrollContainerRef.current.scrollLeft = slidePosition;
     },
     afterChange: (current) => setSlickPaused(false),
   };
@@ -83,7 +86,10 @@ export default function GameSlider({ game }: GameSliderProps) {
           )}
         </Slider>
       </div>
-      <div className="flex overflow-x-auto max-w-[100%] gap-x-4 scroll-smooth">
+      <div
+        className="flex overflow-x-auto max-w-[100%] gap-x-4 scroll-smooth"
+        ref={scrollContainerRef}
+      >
         {game.preview.map((item, index) => (
           <img
             key={index}

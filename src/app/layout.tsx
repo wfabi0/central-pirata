@@ -8,6 +8,7 @@ import Footer from "@/components/footer/Footer";
 import SoundProvider from "@/providers/SomProvider";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Script from "next/script";
 
 const bebas = Bebas_Neue({
   weight: "400",
@@ -31,6 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      {/* <Script>
+        <script src="//www.youtube.com/iframe_api"></script>
+      </Script> */}
       <body
         className={`${bebas.className} text-white flex flex-col min-h-screen`}
       >

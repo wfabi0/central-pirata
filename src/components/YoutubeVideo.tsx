@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-// import ReactPlayer from "react-player";
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+const YoutubePlayer = dynamic(() => import("react-player"), { ssr: false });
 
 interface YoutubeVideoProps {
   videoUrl?: string;
@@ -17,6 +17,7 @@ export default function YoutubeVideo({
   onPlay,
   onPause,
 }: YoutubeVideoProps) {
+  const [isPlayerReady, setIsPlayerReady] = useState(false);
   if (!videoUrl) {
     return (
       <Image
@@ -39,22 +40,28 @@ export default function YoutubeVideo({
     disablekb: 1,
     enablejsapi: 1,
   };
-  return (
-    <ReactPlayer
+  useEffect(() => {
+    setIsPlayerReady(true);
+    return () => {};
+  }, []);
+  return isPlayerReady ? (
+    <YoutubePlayer
       url={videoUrl}
       config={{ youtube: { playerVars: playerOptions } }}
-      onReady={onPlay}
+      onReady={() => "Player pronto."}
       onStart={onPlay}
       onPause={onPause}
       onError={(e) => console.error("Error playing video:", e)}
       fallback={<Loading />}
     />
+  ) : (
+    <Loading />
   );
 }
 
 function Loading() {
   return (
-    <div className="flex items-center justify-center m-10">
+    <div className="flex items-center justify-center m-10 h-64">
       <div className="animate-spin rounded-full border-t-4 border-amber-400 border-solid h-10 w-10" />
     </div>
   );
