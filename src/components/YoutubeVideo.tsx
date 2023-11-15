@@ -42,7 +42,6 @@ export default function YoutubeVideo({
   };
   useEffect(() => {
     setIsPlayerReady(true);
-    return () => {};
   }, []);
   return isPlayerReady ? (
     <YoutubePlayer
