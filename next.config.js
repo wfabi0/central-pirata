@@ -6,8 +6,12 @@ const nextConfig = {
         protocol: "https",
         hostname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
     ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

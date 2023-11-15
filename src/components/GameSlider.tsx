@@ -95,11 +95,14 @@ export default function GameSlider({ game }: GameSliderProps) {
         ref={scrollContainerRef}
       >
         {game.preview.map((item, index) => (
-          <img
+          <Image
+            alt={item}
             key={index}
+            width={160}
+            height={90}
             src={
               isVideo(item)
-                ? `http://img.youtube.com/vi/${getVideoId(
+                ? `https://img.youtube.com/vi/${getVideoId(
                     item
                   )}/maxresdefault.jpg`
                 : item
