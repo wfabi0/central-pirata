@@ -18,6 +18,9 @@ export default function YoutubeVideo({
   onPause,
 }: YoutubeVideoProps) {
   const [isPlayerReady, setIsPlayerReady] = useState(false);
+  useEffect(() => {
+    setIsPlayerReady(true);
+  }, []);
   if (!videoUrl) {
     return (
       <Image
@@ -40,9 +43,6 @@ export default function YoutubeVideo({
     disablekb: 1,
     enablejsapi: 1,
   };
-  useEffect(() => {
-    setIsPlayerReady(true);
-  }, []);
   return isPlayerReady ? (
     <YoutubePlayer
       url={videoUrl}
