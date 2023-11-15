@@ -23,7 +23,6 @@ export const monsterFriend = {
 export const metadata: Metadata = {
   title: "Central Pirata",
   description: "Encontre seus jogos favoritos em promoção!",
-  icons: "@/public/website-icon.png",
 };
 
 export default function RootLayout({
