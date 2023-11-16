@@ -11,7 +11,7 @@ export async function GET(
       encodeURIComponent(gameTitle.title) === encodeURIComponent(game)
   );
   if (!gameSelected) {
-    return NextResponse.json({ error: "Game not found" }, { status: 404 });
+    return NextResponse.json({ message: "Game not found" }, { status: 404 });
   }
   return NextResponse.json(gameSelected, { status: 200 });
 }

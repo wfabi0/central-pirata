@@ -13,8 +13,15 @@ import NavLink from "./NavLink";
 import { useSound } from "@/providers/SomProvider";
 import { BiUser } from "react-icons/bi";
 import CategoriesNav from "./CategoriesNav";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    fetch("/api/auth/auth-check").then((data) => {
+      setIsLoggedIn(data.status === 200 ? true : false);
+    });
+  }, []);
   const { toggleSom } = useSound();
   const pathname = usePathname();
   const checkPath = (path: string) =>
@@ -74,12 +81,26 @@ export default function Navbar() {
             <MagnifyingGlassIcon className="w-8 h-8 group-hover:text-white transition duration-150 ease-in-out" />
           </button>
         </div>
+
         <NavLink href="/cart" className="px-4 py-2 flex">
           <TiShoppingCart className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
         </NavLink>
-        <NavLink href="/auth/login" className="px-4 py-2 flex">
-          <BiUser className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
-        </NavLink>
+
+        {isLoggedIn ? (
+          <NavLink href="/profile" className="px-4 py-2 flex">
+            <Image
+              src={`/api/static/img/default-avatar.jpeg`}
+              width={38}
+              height={38}
+              alt={"Profile"}
+              className="rounded-full border-[3px] border-black"
+            />
+          </NavLink>
+        ) : (
+          <NavLink href="/auth/login" className="px-4 py-2 flex">
+            <BiUser className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
+          </NavLink>
+        )}
       </div>
     </nav>
   );

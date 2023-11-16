@@ -13,9 +13,6 @@ export default function SignUpPage() {
           central pirata
         </h1>
       </div>
-      <h1 className="flex text-black justify-center items-center">
-        Página de Cadastro
-      </h1>
       <SignUpForm />
     </main>
   );
