@@ -77,7 +77,7 @@ export default function Navbar() {
         <NavLink href="/cart" className="px-4 py-2 flex">
           <TiShoppingCart className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
         </NavLink>
-        <NavLink href="/login" className="px-4 py-2 flex">
+        <NavLink href="/auth/login" className="px-4 py-2 flex">
           <BiUser className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
         </NavLink>
       </div>

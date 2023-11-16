@@ -89,7 +89,7 @@ export default function GameSlider({ game }: GameSliderProps) {
         </Slider>
       </div>
       <div
-        className="flex overflow-x-auto max-w-[100%] gap-x-4 scroll-smooth mt-2"
+        className="flex overflow-x-auto max-w-[100%] gap-x-4 scroll-smooth mt-3"
         ref={scrollContainerRef}
       >
         {game.preview.map((item, index) => (

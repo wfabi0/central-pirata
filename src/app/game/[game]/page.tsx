@@ -4,9 +4,11 @@ import { useRouter } from "next/navigation";
 import gameList from "../../../../games.json";
 import { useEffect } from "react";
 import Image from "next/image";
-import YoutubeVideo from "@/components/YoutubeVideo";
 import GameSlider from "@/components/game/GameSlider";
 import GameWidget from "@/components/game/GameWidget";
+import GameCategory from "@/components/game/GameCategory";
+import { categoryMode, categoryModeIcon } from "@/utils/categoryName";
+import ModelIcon from "@/components/game/ModeIcon";
 
 interface GamePageProps {
   params: {
@@ -63,6 +65,43 @@ export default function GamePage({ params }: GamePageProps) {
         <GameSlider game={gameSelected} />
         <div className="flex w-1/2 border-2 border-white bg-black">
           <GameWidget game={gameSelected} />
+        </div>
+      </div>
+      <div className="flex w-[79rem] relative mx-auto mt-7">
+        <div className="grid grid-cols-4 gap-x-3 w-full border-2 border-white bg-black text p-5 determination text-[1rem]">
+          <GameCategory gameSelected={gameSelected} />
+          <div className="border-r-2 border-white">
+            <div className="text-[1.5rem] text-amber-300">{">"} Lançamento</div>
+            <div className="flex flex-row flex-wrap gap-2 mt-3">
+              {gameSelected.data}
+            </div>
+          </div>
+          <div className="border-r-2 border-white">
+            <div className="text-[1.5rem] text-amber-300">
+              {">"} Desenvolvedor
+            </div>
+            <div className="flex flex-row flex-wrap gap-2 mt-3">
+              {gameSelected.developer}
+            </div>
+          </div>
+          <div>
+            <div className="text-[1.5rem] text-amber-300">
+              {">"} Modo de Jogo
+            </div>
+            <div className="flex flex-row flex-wrap gap-2 mt-3">
+              {gameSelected.mode.map((mode, index) => (
+                <div
+                  key={index}
+                  className="flex flex-row items-center bg-blue-500 rounded-sm px-1.5 cursor-pointer hover:bg-blue-700 transition duration-300"
+                >
+                  <span className="mr-2">
+                    <ModelIcon model={categoryModeIcon(mode)} />
+                  </span>
+                  <span>{categoryMode(mode)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </main>

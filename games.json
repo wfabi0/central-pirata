@@ -2,6 +2,7 @@
   {
     "title": "Elden Ring",
     "image": "https://i.imgur.com/l66jFQ4.jpg",
+    "categories": ["action", "fantasy", "rpg", "soulslike"],
     "description": "O NOVO RPG DE AÇÃO E FANTASIA. \nLevante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.",
     "reqs": {
       "min": [
@@ -27,11 +28,15 @@
       "https://www.youtube.com/watch?v=E3Huy2cdih0",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/618418052f91a002e3f9cf6b/screenshots/sulcmvodnhfwgc6i8evb.jpg",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/618418052f91a002e3f9cf6b/screenshots/dkwnd7zhavqbssv9ic6h.jpg"
-    ]
+    ],
+    "data": "24/02/2022",
+    "mode": ["coop-on", "pvp", "solo"],
+    "developer": "FromSoftware, Inc"
   },
   {
     "title": "Red Dead Redemption 2",
     "image": "https://i.imgur.com/WXqwKUm.png",
+    "categories": ["action", "aventure", "open-world", "shot"],
     "description": "América, 1899. O fim da era do velho oeste começa quando os homens da lei caçam as últimas gangues de foras-da-lei. Aqueles que não se rendem ou sucumbem, acabam mortos. Depois que um assalto termina muito mal na cidade de Blackwater, Arthur Morgan e a gangue de Dutch Van der Linde são obrigados a fugir. Com os agentes federais e os melhores caçadores de recompensas do país na sua cola, a gangue deve roubar, assaltar e abrir caminho pelo coração da América para sobreviver. O surgimento de grupos internos ameaça destruir a gangue, então Arthur deve escolher entre seus próprios ideais e a lealdade à gangue que o criou.",
     "reqs": {
       "min": [
@@ -57,11 +62,15 @@
       "https://www.youtube.com/watch?v=gmA6MrX81z4",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/5fbd76bbc883e62934046c52/screenshots/p3bveicrfjo2vexqn4ax.jpg",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/5fbd76bbc883e62934046c52/screenshots/lfbbvv4icyurh9iwvxlk.jpg"
-    ]
+    ],
+    "data": "05/12/2019",
+    "mode": ["multi", "solo"],
+    "developer": "Rockstar Games"
   },
   {
     "title": "The Witcher 3: Wild Hunt",
     "image": "https://i.imgur.com/pxaYYX1.png",
+    "categories": ["action", "aventure", "open-world", "rpg"],
     "description": "Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.",
     "reqs": {
       "min": [
@@ -87,11 +96,15 @@
       "https://www.youtube.com/watch?v=1-l29HlKkXU",
       "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/ss_5710298af2318afd9aa72449ef29ac4a2ef64d8e.600x338.jpg",
       "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/ss_0901e64e9d4b8ebaea8348c194e7a3644d2d832d.600x338.jpg"
-    ]
+    ],
+    "data": "05/12/2019",
+    "mode": ["solo"],
+    "developer": "CD PROJEKT RED"
   },
   {
     "title": "Hogwarts Legacy",
     "image": "https://i.imgur.com/LsdPGEl.jpg",
+    "categories": ["action", "aventure", "fantasy", "rpg"],
     "description": "Hogwarts Legacy é um RPG de ação imersivo de mundo aberto. Agora você pode assumir o controle da ação e estar no centro de sua própria aventura no mundo bruxo. ",
     "reqs": {
       "min": [
@@ -117,11 +130,15 @@
       "https://www.youtube.com/watch?v=78CP8na1Fpo",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/6307dc85ba5b7c0014a7501e/screenshots/iowptdcxkplxf2efxdsm.jpg",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/6307dc85ba5b7c0014a7501e/screenshots/d2fbivss6cpulnylxwns.jpg"
-    ]
+    ],
+    "data": "10/02/2023",
+    "mode": ["solo"],
+    "developer": "Avalanche Software"
   },
   {
     "title": "Lies of P",
     "image": "https://i.imgur.com/dailcFp.jpg",
+    "categories": ["action", "aventure", "rpg"],
     "description": "Lies of P é um soulslike emocionante que pega a história de Pinóquio, vira-a de ponta-cabeça e coloca-a num cenário sombrio e elegante da era belle époque. ",
     "reqs": {
       "min": [
@@ -147,11 +164,15 @@
       "https://www.youtube.com/watch?v=kXZoKdr-xeo",
       "https://cdn.cloudflare.steamstatic.com/steam/apps/1627720/ss_cef0c2964b82e2b80ab0756da08f61c27d9fa33c.600x338.jpg",
       "https://cdn.cloudflare.steamstatic.com/steam/apps/1627720/ss_b510d9d65802c3cc776d1296c3daa1e9a79e3615.600x338.jpg"
-    ]
+    ],
+    "data": "19/09/2023",
+    "mode": ["solo"],
+    "developer": "NEOWIZ"
   },
   {
     "title": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS",
     "image": "https://image.api.playstation.com/vulcan/ap/rnd/202302/2407/ea5dc84380832b4790178dcc68e408afd8f28f2d318b5ea6.png",
+    "categories": ["action", "anime", "fight", "ninja"],
     "description": "Ninjas lendários se reúnem no próximo jogo da série STORM! NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS é um jogo de ação/luta com batalhas ninja frenéticas e dois modos história diferentes. ",
     "reqs": {
       "min": [
@@ -177,11 +198,15 @@
       "https://www.youtube.com/watch?v=z92uGmeJJTw",
       "https://cdn.cloudflare.steamstatic.com/steam/apps/1020790/ss_b335f364a9e7bef84c54f5236f8557279e0f7ceb.600x338.jpg",
       "https://cdn.cloudflare.steamstatic.com/steam/apps/1020790/ss_726a0954289660537a03f058ffa44aa42a199edc.600x338.jpg"
-    ]
+    ],
+    "data": "16/11/2023",
+    "mode": ["pvp", "solo"],
+    "developer": "CyberConnect2 Co. Ltd."
   },
   {
     "title": "Tales of Arise - Beyond the Dawn Edition",
     "image": "https://image.api.playstation.com/vulcan/ap/rnd/202308/3119/da06a1eea20561caf374519d1ae0b1505cafe57e60b76b41.png",
+    "categories": ["action", "aventure", "rpg"],
     "description": "300 anos de tirania. Uma máscara misteriosa. Dor e memórias perdidas. Empunhe a Espada Flamejante e se una a uma jovem intocável para enfrentar os opressores. Viva uma história de libertação com personagens caprichados nos gráficos de nova geração! ",
     "reqs": {
       "min": [
@@ -207,11 +232,15 @@
       "https://www.youtube.com/watch?v=wctcaw1oHGE",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/654aa4b4f6edbe0019707235/screenshots/ybanv0lt1wcfv0ulycxz.jpg",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/654aa4b4f6edbe0019707235/screenshots/zjpk5zjmysp0ambx8win.jpg"
-    ]
+    ],
+    "data": "08/11/2023",
+    "mode": ["solo"],
+    "developer": "BANDAI NAMCO Studios Inc."
   },
   {
     "title": "Tomb Raider I-III Remastered",
     "image": "https://image.api.playstation.com/vulcan/ap/rnd/202308/1521/2a9a576f12f8901b5058856c3b299def44d3ddaa5c93b99f.png",
+    "categories": ["action", "aventure"],
     "description": "Descubra as aventuras originais de Lara Croft, fielmente restauradas.",
     "reqs": {
       "min": [
@@ -233,11 +262,15 @@
       "https://i.imgur.com/uPQ5nfy.jpg",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/651327ddad737e3bb667ce51/screenshots/m0hf5edwctdgyi7odaen.jpg",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/651327ddad737e3bb667ce51/screenshots/lx4apafjpxeud4qawqwp.jpg"
-    ]
+    ],
+    "data": "14/02/2024",
+    "mode": ["solo"],
+    "developer": "ASPYR, Crystal Dynamics"
   },
   {
     "title": "TEKKEN 8",
     "image": "https://bdjogos.com.br/capas/18336-tekken-8-capa-1.jpg",
+    "categories": ["action", "fight"],
     "bannerImage": "https://emeraldcorp.com.br/wp-content/uploads/2023/07/preview-tekken-8-capa.jpg",
     "description": "Prepare-se para o próximo capítulo da lendária franquia de jogos de luta: TEKKEN 8. ",
     "reqs": {
@@ -263,12 +296,16 @@
       "https://www.youtube.com/watch?v=PsCpewoF2E4",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/64778de7906ce600160145df/screenshots/hrl5a3qighqz5lsjqocu.jpg",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/64778de7906ce600160145df/screenshots/v6kk6jszgr9dnvldt52f.jpg"
-    ]
+    ],
+    "data": "25/01/2024",
+    "mode": ["solo"],
+    "developer": "BANDAI NAMCO"
   },
   {
     "title": "Risk of Rain Returns",
     "image": "https://i.imgur.com/oCr6gNv.jpg",
     "bannerImage": "https://i.ytimg.com/vi/F7jgwuE86Q0/maxresdefault.jpg",
+    "categories": ["action"],
     "description": "Cuidadosamente desenvolvido, remasterizado e cheio de novas maneiras de jogar! Risk of Rain está de volta, e ainda melhor! Desfrute do roguelike icônico cheio de combinações únicas de itens, agora com Sobreviventes inéditos, multijogador revisado, conteúdo do Risk of Rain 2 e muito mais! ",
     "reqs": {
       "min": [
@@ -287,6 +324,9 @@
       "https://www.youtube.com/watch?v=gyXNUXEfNvc",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/653bf0812364a942c801bdc0/screenshots/kyedu84ivhqvjsbfzbje.jpg",
       "https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/653bf0812364a942c801bdc0/screenshots/taxhok5m2kkfvbzh3ebx.jpg"
-    ]
+    ],
+    "data": "08/11/2023",
+    "mode": ["coop", "coop-on", "solo"],
+    "developer": "Hopoo Games"
   }
 ]

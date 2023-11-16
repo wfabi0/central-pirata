@@ -1,3 +1,5 @@
+// TODO: colocar para quando nao tiver promoção
+
 "use client";
 
 import { GameProps } from "@/utils/types";
@@ -87,71 +89,71 @@ export default function GameWidget({ game }: GameWidgetProps) {
           </div>
           {req === 0 ? (
             <>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>SO:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[0]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">SO:</span>
+                <span className="text-zinc-400">{game.reqs.min[0]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Processador:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[1]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">Processador:</span>
+                <span className="text-zinc-400">{game.reqs.min[1]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Memória:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[2]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">Memória:</span>
+                <span className="text-zinc-400">{game.reqs.min[2]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Placa de Vídeo:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[3]}</div>
+              <div>
+                <span className="mr-2">Placa de Vídeo:</span>
+                <span className="text-zinc-400">{game.reqs.min[3]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Armazenamento:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[4]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">Armazenamento:</span>
+                <span className="text-zinc-400">{game.reqs.min[4]}</span>
               </div>
             </>
           ) : checkReq() ? (
             <>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>SO:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.max[0]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">SO:</span>
+                <span className="text-zinc-400">{game.reqs.max[0]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Processador:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.max[1]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">Processador:</span>
+                <span className="text-zinc-400">{game.reqs.max[1]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Memória:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.max[2]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">Memória:</span>
+                <span className="text-zinc-400">{game.reqs.max[2]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Placa de Vídeo:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.max[3]}</div>
+              <div>
+                <span className="mr-2">Placa de Vídeo:</span>
+                <span className="text-zinc-400">{game.reqs.max[3]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Armazenamento:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.max[4]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">Armazenamento:</span>
+                <span className="text-zinc-400">{game.reqs.max[4]}</span>
               </div>
             </>
           ) : (
             <>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>SO:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[0]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">SO:</span>
+                <span className="text-zinc-400">{game.reqs.min[0]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Processador:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[1]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">Processador:</span>
+                <span className="text-zinc-400">{game.reqs.min[1]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Memória:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[2]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">Memória:</span>
+                <span className="text-zinc-400">{game.reqs.min[2]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Placa de Vídeo:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[3]}</div>
+              <div>
+                <span className="mr-2">Placa de Vídeo:</span>
+                <span className="text-zinc-400">{game.reqs.min[3]}</span>
               </div>
-              <div className="flex flex-row items-center gap-x-2">
-                <div>Armazenamento:</div>{" "}
-                <div className="text-zinc-400">{game.reqs.min[4]}</div>
+              <div className="flex flex-row items-center">
+                <span className="mr-2">Armazenamento:</span>
+                <span className="text-zinc-400">{game.reqs.min[4]}</span>
               </div>
             </>
           )}
