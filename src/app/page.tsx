@@ -4,8 +4,8 @@
 
 import { monsterFriend } from "./layout";
 import Image from "next/image";
-import TextSelectSound from "@/components/TextSelectSound";
-import MostVisited from "@/components/MostVisited";
+import TextSelectSound from "@/components/sounds/TextSelectSound";
+import MostVisited from "@/components/most-visited/MostVisited";
 import gameList from "../../games.json";
 import randomArray from "@/utils/randomArray";
 import SliderReleases from "@/components/releases/SliderReleases";

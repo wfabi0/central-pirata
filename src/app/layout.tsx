@@ -8,7 +8,6 @@ import Footer from "@/components/footer/Footer";
 import SoundProvider from "@/providers/SomProvider";
 import { Suspense } from "react";
 import Loading from "./loading";
-import Script from "next/script";
 
 const bebas = Bebas_Neue({
   weight: "400",

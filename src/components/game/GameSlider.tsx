@@ -4,7 +4,7 @@ import Slider, { Settings } from "react-slick";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { CustomArrowProps, GameProps } from "@/utils/types";
 import { useRef, useState } from "react";
-import YoutubeVideo from "../YoutubeVideo";
+import YoutubeVideo from "../youtube/YoutubeVideo";
 import Image from "next/image";
 
 interface GameSliderProps {

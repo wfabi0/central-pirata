@@ -2,31 +2,31 @@ import { PrismaClient } from "@prisma/client";
 import { compare, hash } from "bcrypt";
 import { redirect } from "next/navigation";
 import AuthServices from "../services/auth-services";
+import { revalidatePath } from "next/cache";
 
 const prisma = new PrismaClient();
 
-async function createAccout(formData: FormData) {
+async function createAccount(formData: FormData) {
   "use server";
-
   const username = formData.get("username") as string;
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
-  const hashPassword = await hash(password, 10);
-
-  await prisma.user.create({
-    data: {
-      username,
-      email,
-      password: hashPassword,
-    },
-  });
-  redirect("/profile");
+  try {
+    const hashPassword = await hash(password, 10);
+    await prisma.user.create({
+      data: {
+        username,
+        email,
+        password: hashPassword,
+      },
+    });
+    redirect("/profile");
+  } catch (e) {}
 }
 
 async function login(formData: FormData) {
   "use server";
-
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
@@ -37,7 +37,7 @@ async function login(formData: FormData) {
   });
 
   if (!user) {
-    console.log("Usuario invalido.");
+    console.log("Usuário invalido.");
     redirect("/auth/login");
   }
 
@@ -53,11 +53,11 @@ async function login(formData: FormData) {
     email: user.email,
   });
 
-  redirect("/profile");
+  revalidatePath("/profile");
 }
 
 const AuthActions = {
-  createAccout,
+  createAccount,
   login,
 };
 
