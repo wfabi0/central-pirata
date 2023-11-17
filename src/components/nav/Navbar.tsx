@@ -18,12 +18,17 @@ import { useEffect, useState } from "react";
 export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
-    fetch("/api/auth/auth-check", {
-      headers: { "Content-Type": "application/json" },
-      cache: "no-cache",
-    }).then((data) => {
-      setIsLoggedIn(data.status === 200 ? true : false);
-    });
+    console.log("Oi")
+    const checkAuthentication = async () => {
+      const resp = await fetch("/api/auth/auth-check", {
+        headers: { "Content-Type": "application/json" },
+        next: {
+          revalidate: 60,
+        },
+      });
+      setIsLoggedIn(resp.status === 200 ? true : false);
+    };
+    checkAuthentication();
   }, []);
   const { toggleSom } = useSound();
   const pathname = usePathname();
@@ -92,7 +97,7 @@ export default function Navbar() {
         {isLoggedIn ? (
           <NavLink href="/profile" className="px-4 py-2 flex">
             <Image
-              src={`/api/static/img/default-avatar.jpeg`}
+              src={`/statics/default-avatar.jpeg`}
               width={38}
               height={38}
               alt={"Profile"}

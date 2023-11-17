@@ -7,7 +7,7 @@ export default function ProfilePage() {
       <h1 className="text-black">Você está logado.</h1>
       <Link href={"/api/auth/logout"}>
         <Image
-          src={"/api/static/img/default-avatar.jpeg"}
+          src={`/statics/default-avatar.jpeg`}
           alt="Logo"
           width={150}
           height={150}
