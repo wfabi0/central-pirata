@@ -10,7 +10,7 @@ import { LiaGamepadSolid } from "react-icons/lia";
 import { TiShoppingCart } from "react-icons/ti";
 import { usePathname } from "next/navigation";
 import NavLink from "./NavLink";
-import { useSound } from "@/providers/SomProvider";
+import { useSound } from "@/providers/game/SoundProvider";
 import { BiUser } from "react-icons/bi";
 import CategoriesNav from "./CategoriesNav";
 import { useEffect, useState } from "react";

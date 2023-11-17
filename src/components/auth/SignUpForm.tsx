@@ -1,4 +1,6 @@
-import AuthActions from "@/modules/auth/actions/auth-actions";
+"use client";
+
+import { createAccount } from "@/modules/auth/actions/auth-actions";
 import Link from "next/link";
 
 export default function SignUpForm() {
@@ -6,7 +8,10 @@ export default function SignUpForm() {
     <div className="determination container mx-auto mt-8 text-white">
       <form
         className="max-w-md mx-auto p-6 bg-black shadow-md rounded-md border-2 border-white"
-        action={AuthActions.createAccount}
+        action={async (formData: FormData) => {
+          const { error } = await createAccount(formData);
+          if (error) alert(error);
+        }}
       >
         <h2 className="text-2xl font-semibold mb-6">Criar uma conta</h2>
         <div className="mb-4">

@@ -6,7 +6,7 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import { BsInstagram, BsTwitter, BsDiscord } from "react-icons/bs";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
-import { useSound } from "@/providers/SomProvider";
+import { useSound } from "@/providers/game/SoundProvider";
 import FooterLink from "./FooterLink";
 
 export default function Footer() {

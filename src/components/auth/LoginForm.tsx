@@ -1,12 +1,19 @@
-import AuthActions from "@/modules/auth/actions/auth-actions";
+"use client";
+
 import Link from "next/link";
+import LoginButton from "./buttons/LoginButton";
+import { login } from "@/modules/auth/actions/auth-actions";
 
 export default function LoginForm() {
   return (
     <div className="determination container mx-auto mt-8 text-white">
       <form
         className="max-w-md mx-auto p-6 bg-black shadow-md rounded-md border-2 border-white"
-        action={AuthActions.login}
+        action={async (formData: FormData) => {
+          const { error } = await login(formData);
+          if (error) alert(error);
+        }}
+        aria-disabled="true"
       >
         <h2 className="text-2xl font-semibold mb-6">Login</h2>
         <div className="mb-4">
@@ -35,12 +42,7 @@ export default function LoginForm() {
             required
           />
         </div>
-        <button
-          className="w-full bg-amber-500 text-white p-3 rounded-md hover:bg-amber-700 transition duration-300"
-          type="submit"
-        >
-          Avançar
-        </button>
+        <LoginButton />
         <Link
           className="flex mt-2 hover:text-blue-500 transition duration-300"
           href={"/auth/sign-up"}

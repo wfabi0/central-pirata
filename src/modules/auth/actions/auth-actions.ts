@@ -1,13 +1,13 @@
+"use server";
+
 import { PrismaClient } from "@prisma/client";
 import { compare, hash } from "bcrypt";
 import { redirect } from "next/navigation";
 import AuthServices from "../services/auth-services";
-import { revalidatePath } from "next/cache";
 
 const prisma = new PrismaClient();
 
-async function createAccount(formData: FormData) {
-  "use server";
+export async function createAccount(formData: FormData) {
   const username = formData.get("username") as string;
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
@@ -22,11 +22,12 @@ async function createAccount(formData: FormData) {
       },
     });
     redirect("/profile");
-  } catch (e) {}
+  } catch (e) {
+    return { error: "Usuário ou senha inválido." };
+  }
 }
 
-async function login(formData: FormData) {
-  "use server";
+export async function login(formData: FormData) {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
@@ -37,14 +38,12 @@ async function login(formData: FormData) {
   });
 
   if (!user) {
-    console.log("Usuário invalido.");
-    redirect("/auth/login");
+    return { error: "Usuário ou senha inválido." };
   }
 
   const isMatch = await compare(password, user.password);
   if (!isMatch) {
-    console.log("Usuário ou senha inválidos");
-    redirect("/auth/login");
+    return { error: "Usuário ou senha inválido." };
   }
 
   await AuthServices.createSessionToken({
@@ -53,12 +52,5 @@ async function login(formData: FormData) {
     email: user.email,
   });
 
-  revalidatePath("/profile");
+  redirect("/profile");
 }
-
-const AuthActions = {
-  createAccount,
-  login,
-};
-
-export default AuthActions;

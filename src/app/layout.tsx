@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "@/components/nav/Navbar";
 import Footer from "@/components/footer/Footer";
-import SoundProvider from "@/providers/SomProvider";
+import SoundProvider from "@/providers/game/SoundProvider";
 import { Suspense } from "react";
 import Loading from "./loading";
 
