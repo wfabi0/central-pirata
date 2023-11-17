@@ -2,11 +2,11 @@ import AuthServices from "@/modules/auth/services/auth-services";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
-  const isAutenticated = await AuthServices.isSessionValid();
+  const isAuthenticated = await AuthServices.isSessionValid();
   return NextResponse.json(
     {
-      message: isAutenticated ? "Authenticated" : "Not authenticated",
+      message: isAuthenticated ? "Authenticated" : "Not authenticated",
     },
-    { status: isAutenticated ? 200 : 401 }
+    { status: isAuthenticated ? 200 : 401 }
   );
 }

@@ -18,7 +18,10 @@ import { useEffect, useState } from "react";
 export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
-    fetch("/api/auth/auth-check").then((data) => {
+    fetch("/api/auth/auth-check", {
+      headers: { "Content-Type": "application/json" },
+      cache: "no-cache",
+    }).then((data) => {
       setIsLoggedIn(data.status === 200 ? true : false);
     });
   }, []);
