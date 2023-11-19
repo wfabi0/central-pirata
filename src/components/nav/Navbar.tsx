@@ -27,7 +27,7 @@ const checkAuthentication = async () => {
 };
 
 export default function Navbar() {
-  const { data: isLoggedIn } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["userStatus"],
     queryFn: checkAuthentication,
   });
@@ -95,7 +95,7 @@ export default function Navbar() {
           <TiShoppingCart className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
         </NavLink>
 
-        {isLoggedIn ? (
+        {data ? (
           <NavLink href="/profile" className="px-4 py-2 flex">
             <Image
               src={`/statics/default-avatar.jpeg`}
