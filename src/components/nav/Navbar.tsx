@@ -13,23 +13,24 @@ import NavLink from "./NavLink";
 import { useSound } from "@/providers/game/SoundProvider";
 import { BiUser } from "react-icons/bi";
 import CategoriesNav from "./CategoriesNav";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+
+const checkAuthentication = async () => {
+  const resp = await fetch("/api/auth/auth-check", {
+    headers: { "Content-Type": "application/json" },
+    next: {
+      revalidate: 60,
+    },
+  });
+  return resp.status === 200 ? true : false;
+};
 
 export default function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  useEffect(() => {
-    console.log("Oi")
-    const checkAuthentication = async () => {
-      const resp = await fetch("/api/auth/auth-check", {
-        headers: { "Content-Type": "application/json" },
-        next: {
-          revalidate: 60,
-        },
-      });
-      setIsLoggedIn(resp.status === 200 ? true : false);
-    };
-    checkAuthentication();
-  }, []);
+  const { data: isLoggedIn } = useQuery({
+    queryKey: ["userStatus"],
+    queryFn: checkAuthentication,
+  });
   const { toggleSom } = useSound();
   const pathname = usePathname();
   const checkPath = (path: string) =>

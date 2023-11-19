@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "@/components/nav/Navbar";
 import Footer from "@/components/footer/Footer";
-import SoundProvider from "@/providers/game/SoundProvider";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Providers from "./providers";
 
 const bebas = Bebas_Neue({
   weight: "400",
@@ -34,13 +34,13 @@ export default function RootLayout({
       <body
         className={`${bebas.className} text-white flex flex-col min-h-screen`}
       >
-        <SoundProvider>
+        <Providers>
           <div className="flex-1">
             <Navbar />
             <Suspense fallback={<Loading />}>{children}</Suspense>
           </div>
           <Footer />
-        </SoundProvider>
+        </Providers>
       </body>
     </html>
   );
