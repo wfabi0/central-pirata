@@ -13,7 +13,7 @@ import NavLink from "./NavLink";
 import { useSound } from "@/providers/game/SoundProvider";
 import { BiUser } from "react-icons/bi";
 import CategoriesNav from "./CategoriesNav";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 const checkAuthentication = async () => {
@@ -29,7 +29,8 @@ const checkAuthentication = async () => {
 export default function Navbar() {
   const { data, isLoading, isError } = useQuery({
     queryKey: ["userStatus"],
-    queryFn: checkAuthentication,
+    queryFn: () => checkAuthentication(),
+    staleTime: 5 * 1000,
   });
   const { toggleSom } = useSound();
   const pathname = usePathname();
@@ -95,21 +96,29 @@ export default function Navbar() {
           <TiShoppingCart className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
         </NavLink>
 
-        {data ? (
-          <NavLink href="/profile" className="px-4 py-2 flex">
-            <Image
-              src={`/statics/default-avatar.jpeg`}
-              width={38}
-              height={38}
-              alt={"Profile"}
-              className="rounded-full border-[3px] border-black"
-            />
-          </NavLink>
-        ) : (
-          <NavLink href="/auth/login" className="px-4 py-2 flex">
-            <BiUser className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
-          </NavLink>
-        )}
+        <Suspense
+          fallback={
+            <NavLink href="/auth/login" className="px-4 py-2 flex">
+              <BiUser className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
+            </NavLink>
+          }
+        >
+          {data ? (
+            <NavLink href="/profile" className="px-4 py-2 flex">
+              <Image
+                src={`/statics/default-avatar.jpeg`}
+                width={38}
+                height={38}
+                alt={"Profile"}
+                className="rounded-full border-[3px] border-black"
+              />
+            </NavLink>
+          ) : (
+            <NavLink href="/auth/login" className="px-4 py-2 flex">
+              <BiUser className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
+            </NavLink>
+          )}
+        </Suspense>
       </div>
     </nav>
   );

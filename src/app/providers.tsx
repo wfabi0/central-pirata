@@ -1,5 +1,5 @@
-import AuthProvider from "@/providers/auth/AuthProvider";
 import SoundProvider from "@/providers/game/SoundProvider";
+import QueryProvider from "@/providers/query-provider/QueryProvider";
 
 interface ProvidersProps {
   children?: React.ReactNode;
@@ -7,8 +7,8 @@ interface ProvidersProps {
 
 export default function Providers({ children }: ProvidersProps) {
   return (
-    <AuthProvider>
+    <QueryProvider>
       <SoundProvider>{children}</SoundProvider>
-    </AuthProvider>
+    </QueryProvider>
   );
 }
