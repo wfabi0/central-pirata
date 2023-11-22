@@ -9,7 +9,16 @@ interface QueryProviderProps {
 }
 
 export default function QueryProvider({ children }: QueryProviderProps) {
-  const [queryClient] = useState(new QueryClient());
+  const [queryClient] = useState(
+    new QueryClient({
+      defaultOptions: {
+        queries: {
+          refetchOnWindowFocus: false,
+          staleTime: 1000 * 5,
+        },
+      },
+    })
+  );
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryStreamedHydration>{children}</ReactQueryStreamedHydration>

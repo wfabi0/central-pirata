@@ -11,20 +11,18 @@ export async function createAccount(formData: FormData) {
   const username = formData.get("username") as string;
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
-
-  try {
-    const hashPassword = await hash(password, 10);
-    await prisma.user.create({
-      data: {
-        username,
-        email,
-        password: hashPassword,
-      },
-    });
-    redirect("/profile");
-  } catch (e) {
+  const hashPassword = await hash(password, 10);
+  const user = await prisma.user.create({
+    data: {
+      username,
+      email,
+      password: hashPassword,
+    },
+  });
+  if (!user) {
     return { error: "Usuário ou senha inválido." };
   }
+  redirect("/profile");
 }
 
 export async function login(formData: FormData) {

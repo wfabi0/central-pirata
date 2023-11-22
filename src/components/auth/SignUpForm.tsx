@@ -2,6 +2,7 @@
 
 import { createAccount } from "@/modules/auth/actions/auth-actions";
 import Link from "next/link";
+import SignUpButton from "./buttons/SignUpButton";
 
 export default function SignUpForm() {
   return (
@@ -53,12 +54,7 @@ export default function SignUpForm() {
             required
           />
         </div>
-        <button
-          className="w-full bg-amber-500 text-white p-3 rounded-md hover:bg-amber-700 transition duration-300"
-          type="submit"
-        >
-          Avançar
-        </button>
+        <SignUpButton />
         <Link
           className="flex mt-2 hover:text-blue-500 transition duration-300"
           href={"/auth/login"}

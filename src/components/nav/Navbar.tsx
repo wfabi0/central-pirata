@@ -13,7 +13,7 @@ import NavLink from "./NavLink";
 import { useSound } from "@/providers/game/SoundProvider";
 import { BiUser } from "react-icons/bi";
 import CategoriesNav from "./CategoriesNav";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 const checkAuthentication = async () => {
@@ -27,10 +27,13 @@ const checkAuthentication = async () => {
 };
 
 export default function Navbar() {
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["userStatus"],
+  const { data, isLoading, isError, refetch } = useQuery({
+    queryKey: ["avatarUserNav"],
     queryFn: () => checkAuthentication(),
-    staleTime: 5 * 1000,
+    staleTime: 1000 * 30, // 30 seconds
+  });
+  useEffect(() => {
+    refetch();
   });
   const { toggleSom } = useSound();
   const pathname = usePathname();
