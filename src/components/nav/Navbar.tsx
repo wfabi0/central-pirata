@@ -15,6 +15,7 @@ import { BiUser } from "react-icons/bi";
 import CategoriesNav from "./CategoriesNav";
 import { Suspense, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const checkAuthentication = async () => {
   const resp = await fetch("/api/auth/auth-check", {
@@ -23,20 +24,24 @@ const checkAuthentication = async () => {
       revalidate: 60,
     },
   });
-  return resp.status === 200 ? true : false;
+  const data = await resp.json();
+  return {
+    data: data,
+    status: resp.status === 200 ? true : false,
+  };
 };
 
 export default function Navbar() {
+  const pathname = usePathname();
   const { data, isLoading, isError, refetch } = useQuery({
-    queryKey: ["avatarUserNav"],
+    queryKey: ["userInfo"],
     queryFn: () => checkAuthentication(),
     staleTime: 1000 * 30, // 30 seconds
   });
   useEffect(() => {
     refetch();
-  });
+  }, [pathname]);
   const { toggleSom } = useSound();
-  const pathname = usePathname();
   const checkPath = (path: string) =>
     pathname === path ? "border-b-2 border-white hover:border-black" : "";
   const getHash = () =>
@@ -95,7 +100,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <NavLink href="/cart" className="px-4 py-2 flex">
+        <NavLink href="/cart" className="px-4 py-2 flex rounded-full">
           <TiShoppingCart className="w-9 h-9 border-[3px] border-black hover:border-white transition duration-300 rounded-full" />
         </NavLink>
 
@@ -106,15 +111,17 @@ export default function Navbar() {
             </NavLink>
           }
         >
-          {data ? (
+          {data?.status ? (
             <NavLink href="/profile" className="px-4 py-2 flex">
-              <Image
-                src={`/statics/default-avatar.jpeg`}
-                width={38}
-                height={38}
-                alt={"Profile"}
-                className="rounded-full border-[3px] border-black"
-              />
+              <Avatar className="rounded-full border-[3px] border-black">
+                <AvatarImage
+                  width={38}
+                  height={38}
+                  src="/statics/default-avatar.jpeg"
+                  alt="profile"
+                />
+                <AvatarFallback>CP</AvatarFallback>
+              </Avatar>
             </NavLink>
           ) : (
             <NavLink href="/auth/login" className="px-4 py-2 flex">

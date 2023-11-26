@@ -1,7 +1,6 @@
-// TODO: quando passar o mouse em cima dos titulos principais de * virar > (dar ideia de seleção e fazer o som)
 // TODO: fazer a promoção ser por tempo { date, temp, price }
 // TODO: fazer estoque de jogos | desativar botao de comprar (sem estoque)
-// TODO: arrumar o auth (esta registrando e falando que tem erro)
+// TODO: trocar os request do .json para API
 
 import { monsterFriend } from "./layout";
 import Image from "next/image";

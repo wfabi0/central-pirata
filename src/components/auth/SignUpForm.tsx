@@ -3,15 +3,25 @@
 import { createAccount } from "@/modules/auth/actions/auth-actions";
 import Link from "next/link";
 import SignUpButton from "./buttons/SignUpButton";
+import { useToast } from "../ui/use-toast";
+import { useRef } from "react";
 
 export default function SignUpForm() {
+  const { toast } = useToast();
+  const ref = useRef<HTMLFormElement>(null);
   return (
     <div className="determination container mx-auto mt-8 text-white">
       <form
+        ref={ref}
         className="max-w-md mx-auto p-6 bg-black shadow-md rounded-md border-2 border-white"
         action={async (formData: FormData) => {
-          const { error } = await createAccount(formData);
-          if (error) alert(error);
+          const { message } = await createAccount(formData);
+          if (message) {
+            ref.current?.reset();
+            toast({
+              description: `* ${message}`,
+            });
+          }
         }}
       >
         <h2 className="text-2xl font-semibold mb-6">Criar uma conta</h2>

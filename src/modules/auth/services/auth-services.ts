@@ -15,7 +15,7 @@ async function createSessionToken(payload = {}) {
     })
     .setExpirationTime("1d")
     .sign(secret);
-  const { exp, role } = await openSessionToken(session);
+  const { exp } = await openSessionToken(session);
   cookies().set("session", session, {
     expires: (exp as number) * 1000,
     path: "/",
@@ -34,6 +34,16 @@ async function isSessionValid() {
   return false;
 }
 
+async function userDetails() {
+  const sessionCookie = cookies().get("session");
+  if (sessionCookie) {
+    const { value } = sessionCookie;
+    const { username, email, role } = await openSessionToken(value);
+    return { username, email, role: role || "USER" };
+  }
+  return false;
+}
+
 function destroySession() {
   cookies().delete("session");
 }
@@ -41,6 +51,7 @@ function destroySession() {
 const AuthServices = {
   openSessionToken,
   createSessionToken,
+  userDetails,
   isSessionValid,
   destroySession,
 };

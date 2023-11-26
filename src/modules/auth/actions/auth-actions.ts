@@ -12,15 +12,16 @@ export async function createAccount(formData: FormData) {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
   const hashPassword = await hash(password, 10);
-  const user = await prisma.user.create({
-    data: {
-      username,
-      email,
-      password: hashPassword,
-    },
-  });
-  if (!user) {
-    return { error: "Usuário ou senha inválido." };
+  try {
+    const user = await prisma.user.create({
+      data: {
+        username,
+        email,
+        password: hashPassword,
+      },
+    });
+  } catch (error) {
+    return { message: "Usuário ou senha inválido." };
   }
   redirect("/profile");
 }
@@ -36,18 +37,19 @@ export async function login(formData: FormData) {
   });
 
   if (!user) {
-    return { error: "Usuário ou senha inválido." };
+    return { message: "Usuário ou senha inválido." };
   }
 
   const isMatch = await compare(password, user.password);
   if (!isMatch) {
-    return { error: "Usuário ou senha inválido." };
+    return { message: "Usuário ou senha inválido." };
   }
 
   await AuthServices.createSessionToken({
     sub: user.id,
     username: user.username,
     email: user.email,
+    role: user.role,
   });
 
   redirect("/profile");

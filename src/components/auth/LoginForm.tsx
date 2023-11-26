@@ -3,15 +3,25 @@
 import Link from "next/link";
 import LoginButton from "./buttons/LoginButton";
 import { login } from "@/modules/auth/actions/auth-actions";
+import { useToast } from "../ui/use-toast";
+import { useRef } from "react";
 
 export default function LoginForm() {
+  const { toast } = useToast();
+  const ref = useRef<HTMLFormElement>(null);
   return (
     <div className="determination container mx-auto mt-8 text-white">
       <form
+        ref={ref}
         className="max-w-md mx-auto p-6 bg-black shadow-md rounded-md border-2 border-white"
         action={async (formData: FormData) => {
-          const { error } = await login(formData);
-          if (error) alert(error);
+          const { message } = await login(formData);
+          if (message) {
+            ref.current?.reset();
+            toast({
+              description: `* ${message}`,
+            });
+          }
         }}
         aria-disabled="true"
       >
