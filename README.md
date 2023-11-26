@@ -46,6 +46,10 @@ Adicione as configurações
 ```env
 DATABASE_URL="sua url do mongodb"
 AUTH_SECRET="gere uma senha secreta"
+
+#Exemplo:
+DATABASE_URL="mongodb+srv://NOME:SENHA@CLUSTER/nextcrashcourse"
+AUTH_SECRET="7gXu7;J0gnMAuo%R"
 ```
 
 #### 🔗 Recomendações:
