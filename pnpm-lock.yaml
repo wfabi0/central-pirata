@@ -45,8 +45,8 @@ dependencies:
     specifier: ^5.8.4
     version: 5.8.4(react-dom@18.2.0)(react@18.2.0)
   '@tanstack/react-query-next-experimental':
-    specifier: ^5.8.4
-    version: 5.8.4(@tanstack/react-query@5.8.4)(next@14.0.2)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^5.18.0
+    version: 5.18.0(@tanstack/react-query@5.8.4)(next@14.0.2)(react@18.2.0)
   bcrypt:
     specifier: ^5.1.1
     version: 5.1.1
@@ -1129,18 +1129,16 @@ packages:
     resolution: {integrity: sha512-SWFMFtcHfttLYif6pevnnMYnBvxKf3C+MHMH7bevyYfpXpTMsLB9O6nNGBdWSoPwnZRXFNyNeVZOw25Wmdasow==}
     dev: false
 
-  /@tanstack/react-query-next-experimental@5.8.4(@tanstack/react-query@5.8.4)(next@14.0.2)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-+FfKNLOcjXyFUZHr5z2Wlm/7vJ9VCZUa3ajeOz/1awGSUuGaMyvHGYMO8Pk9YKxg7Fd/lymp1gjOccJcs3vc6g==}
+  /@tanstack/react-query-next-experimental@5.18.0(@tanstack/react-query@5.8.4)(next@14.0.2)(react@18.2.0):
+    resolution: {integrity: sha512-8xrk+UjXE38MC5pOG3ztdoobXXzFaIXnQ6a1UfLdZCVkXDzt3RbHchpf/ESTjYmKYL5ohJNVO2by19ZMlzjPSQ==}
     peerDependencies:
-      '@tanstack/react-query': ^5.8.4
+      '@tanstack/react-query': ^5.18.0
       next: ^13 || ^14
       react: ^18.0.0
-      react-dom: ^18.0.0
     dependencies:
       '@tanstack/react-query': 5.8.4(react-dom@18.2.0)(react@18.2.0)
       next: 14.0.2(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@tanstack/react-query@5.8.4(react-dom@18.2.0)(react@18.2.0):
